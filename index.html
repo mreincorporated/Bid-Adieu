@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Puzzle Applet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Home Page -->
+        <div id="homePage" class="page">
+            <h1>Welcome to the Puzzle Challenge</h1>
+            <button onclick="navigateTo('puzzle1')">Start Puzzle 1</button>
+        </div>
+
+        <!-- Puzzle 1 Page -->
+        <div id="puzzle1Page" class="page" style="display:none;">
+            <h2>Puzzle 1: The Riddle of Light</h2>
+            <p>I reveal the unseen, yet hide in plain sight. I’m the swiftest to exist, yet I’m always delayed. What am I?</p>
+            <input type="text" id="puzzle1Answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer('puzzle1')">Submit</button>
+            <p id="puzzle1Feedback"></p>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
+
+        <!-- Puzzle 2 Page -->
+        <div id="puzzle2Page" class="page" style="display:none;">
+            <h2>Puzzle 2: The Whispering Statues</h2>
+            <p>Stand where you hear the truth and the path will open. Which direction do you face?</p>
+            <input type="text" id="puzzle2Answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer('puzzle2')">Submit</button>
+            <p id="puzzle2Feedback"></p>
+            <button onclick="navigateTo('home')">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
