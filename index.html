@@ -4,38 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murder Mystery Game</title>
+    <!-- Link to the external CSS file that styles the entire web page -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Top Bar: This bar is fixed at the top of the page and includes the page title and progress bar -->
+    <div id="topBar">
+        <!-- Dynamic title displaying the current page name and placeholder objective -->
+        <div id="pageTitle">[Page Name] | Objective: [Placeholder Objective]</div>
+        <!-- Container for the progress bar -->
+        <div id="progressContainer">
+            <!-- The actual progress bar element which will fill based on progress -->
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- Vertical Navigation Bar: Allows navigation between different pages of the app -->
+    <div id="navBar">
+        <ul>
+            <!-- Navigation link for Home page, triggers navigateTo function -->
+            <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+            <!-- Navigation link for Puzzle 1 page -->
+            <li><a href="#" onclick="navigateTo('puzzle1')">Puzzle 1</a></li>
+            <!-- Navigation link for Puzzle 2 page -->
+            <li><a href="#" onclick="navigateTo('puzzle2')">Puzzle 2</a></li>
+        </ul>
+    </div>
+
+    <!-- Main App Container: This div holds all the pages that will be displayed -->
     <div id="app">
-        <!-- Home Page -->
+        <!-- Home Page (Landing Page): Shown by default when the app loads -->
         <div id="homePage" class="page active">
             <h1>Welcome to the Murder Mystery</h1>
+            <!-- Button to start the first puzzle, navigates to Puzzle 1 page -->
             <button onclick="navigateTo('puzzle1')">Start Puzzle 1</button>
         </div>
 
-        <!-- Puzzle 1 Page -->
+        <!-- Puzzle 1 Page: Contains the first puzzle with an input field and a submit button -->
         <div id="puzzle1Page" class="page">
             <h2>Puzzle 1: The Riddle of Light</h2>
             <p>I reveal the unseen, yet hide in plain sight. I’m the swiftest to exist, yet I’m always delayed. What am I?</p>
+            <!-- Input field for user to enter their answer -->
             <input type="text" id="puzzle1Answer" placeholder="Enter your answer">
+            <!-- Submit button to check the answer entered by the user -->
             <button onclick="checkAnswer('puzzle1')">Submit</button>
+            <!-- Feedback area where the result of the user's answer will be displayed -->
             <p id="puzzle1Feedback"></p>
+            <!-- Button to navigate back to the Home page -->
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
 
-        <!-- Puzzle 2 Page -->
+        <!-- Puzzle 2 Page: Contains the second puzzle with an input field and a submit button -->
         <div id="puzzle2Page" class="page">
             <h2>Puzzle 2: The Whispering Statues</h2>
             <p>Stand where you hear the truth and the path will open. Which direction do you face?</p>
+            <!-- Input field for user to enter their answer -->
             <input type="text" id="puzzle2Answer" placeholder="Enter your answer">
+            <!-- Submit button to check the answer entered by the user -->
             <button onclick="checkAnswer('puzzle2')">Submit</button>
+            <!-- Feedback area where the result of the user's answer will be displayed -->
             <p id="puzzle2Feedback"></p>
+            <!-- Button to navigate back to the Home page -->
             <button onclick="navigateTo('home')">Back to Home</button>
         </div>
     </div>
 
+    <!-- Link to the external JavaScript file that handles page navigation and other interactions -->
     <script src="script.js"></script>
 </body>
 </html>
-
