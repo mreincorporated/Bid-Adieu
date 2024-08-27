@@ -1,98 +1,118 @@
-/* General Body Style */
+/* General Body Style: Applies to the whole body of the web page */
 body {
-    font-family: 'Georgia', serif;
-    background-color: #1C1C1C;
-    color: #EDEDED;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttQDhbvh0couUKLot5doRuK-RwCbwrVrs6g&s'); /* Optional: Add a dark, mysterious background image */
-    background-size: cover;
-    background-position: center;
+    font-family: 'Georgia', serif; /* Sets the font style for all text */
+    background-color: #1C1C1C; /* Dark background color for a mysterious atmosphere */
+    color: #EDEDED; /* Light text color for readability against the dark background */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Flexbox layout to center content vertically and horizontally */
+    justify-content: flex-start; /* Aligns content to the top */
+    height: 100vh; /* Sets the height to cover the full viewport */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttQDhbvho0cuUKLot5doRuk-RwCbwrVrs6g&s'); /* Background image for thematic effect */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
 }
 
-/* App Container */
-#app {
+/* Top Bar: Fixed at the top of the page, contains page title and progress bar */
+#topBar {
+    position: fixed; /* Keeps the bar fixed at the top */
+    top: 0; /* Aligns to the top of the page */
+    left: 0; /* Aligns to the left side of the page */
+    width: 100%; /* Extends the bar across the full width of the page */
+    height: 50px; /* Sets the height of the bar */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    display: flex; /* Flexbox layout to align items horizontally */
+    justify-content: space-between; /* Spaces out the title and progress bar */
+    align-items: center; /* Vertically centers the content */
+    padding: 0 20px; /* Adds horizontal padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+    z-index: 1000; /* Ensures the top bar stays on top of other elements */
+}
+
+/* Page Title in Top Bar */
+#pageTitle {
+    color: #FFD700; /* Gold color for a classy look */
+    font-size: 18px; /* Sets the font size */
+}
+
+/* Progress Bar Container */
+#progressContainer {
+    width: 40%; /* Width of the progress bar container */
+    background-color: #333; /* Dark background for contrast */
+    border-radius: 10px; /* Rounds the corners */
+}
+
+/* Progress Bar: Fills up based on game progress */
+#progressBar {
+    width: 30%; /* Starting progress width, adjustable via JavaScript */
+    height: 15px; /* Height of the progress bar */
+    background-color: #4CAF50; /* Green color to indicate progress */
+    border-radius: 10px; /* Rounds the corners */
+    transition: width 0.3s ease; /* Smooth transition when the progress changes */
+}
+
+/* Vertical Navigation Bar: Fixed on the left side for navigation */
+#navBar {
+    position: fixed; /* Keeps the navigation bar fixed on the left */
+    top: 50px; /* Starts right below the top bar */
+    left: 0; /* Aligns to the left side of the page */
+    width: 200px; /* Width of the navigation bar */
+    height: calc(100% - 50px); /* Height of the nav bar, minus the top bar's height */
     background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    max-width: 600px;
-    text-align: center;
+    padding-top: 20px; /* Adds padding at the top */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+    z-index: 999; /* Keeps the nav bar on top but below the top bar */
 }
 
-/* Headings */
-h1 {
-    font-family: 'Times New Roman', serif;
-    font-size: 2.5em;
-    color: #FFD700; /* Gold color for a touch of elegance */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #000000;
+/* Navigation List: Styles the list of links */
+#navBar ul {
+    list-style-type: none; /* Removes default list bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
 }
 
-h2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 2em;
-    color: #FF4500; /* Dark orange for suspenseful elements */
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 8px #000000;
+/* Navigation List Items: Styles each list item */
+#navBar ul li {
+    padding: 10px 20px; /* Adds padding around each list item */
 }
 
-/* Buttons */
-button {
-    font-family: 'Arial Black', sans-serif;
-    background-color: #8B0000; /* Dark red to signify danger/mystery */
-    color: #FFF;
-    border: none;
-    padding: 15px 30px;
-    margin-top: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
+/* Navigation Links: Styles the links within the list */
+#navBar ul li a {
+    color: #EDEDED; /* Light color for the text */
+    text-decoration: none; /* Removes default underline */
+    font-size: 18px; /* Sets the font size */
+    display: block; /* Makes the link fill the entire list item area */
 }
 
-button:hover {
-    background-color: #A52A2A; /* Slightly lighter red on hover */
-    transform: translateY(-2px);
+/* Hover Effect for Links: Changes the background when hovering */
+#navBar ul li a:hover {
+    background-color: #444; /* Darker background on hover */
+    border-radius: 5px; /* Rounds the corners */
 }
 
-input[type="text"] {
-    font-family: 'Courier New', monospace;
-    background-color: #2F4F4F; /* Dark slate gray */
-    color: #EDEDED;
-    border: 1px solid #696969;
-    padding: 12px;
-    width: 80%;
-    margin-top: 10px;
-    border-radius: 5px;
+/* Main App Container: Adjustments to fit around the top and side bars */
+#app {
+    margin-left: 220px; /* Pushes content to the right to accommodate the nav bar */
+    margin-top: 60px; /* Pushes content down to accommodate the top bar */
+    padding: 20px; /* Adds padding inside the app container */
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    padding: 40px; /* Adds padding around the content */
+    border-radius: 10px; /* Rounds the corners of the container */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Adds a shadow for depth */
+    max-width: 800px; /* Limits the width of the content area */
+    text-align: center; /* Centers the text within the container */
 }
 
-p {
-    font-family: 'Courier New', monospace;
-    margin-top: 20px;
-    color: #FFD700;
-    font-size: 1.1em;
-}
-
-/* Feedback Message */
-#puzzle1Feedback, #puzzle2Feedback {
-    font-family: 'Courier New', monospace;
-    color: #ADFF2F; /* Light green to indicate correct feedback */
-    margin-top: 20px;
-}
-
-/* Transition Effect for Page Navigation */
+/* Page Sections: Hides and shows different pages */
 .page {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    display: none; /* Pages are hidden by default */
+    opacity: 0; /* Sets initial opacity to 0 */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for fading in */
 }
 
+/* Active Page: Styles the currently active page */
 .page.active {
-    display: block;
-    opacity: 1;
+    display: block; /* Shows the active page */
+    opacity: 1; /* Fully opaque */
 }
+
