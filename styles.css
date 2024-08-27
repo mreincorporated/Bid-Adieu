@@ -1,15 +1,14 @@
 /* General Body Style: Applies to the whole body of the web page */
 body {
-    font-family: 'Georgia', serif; /* Sets the font style for all text */
-    background-color: #1C1C1C; /* Dark background color for a mysterious atmosphere */
-    color: #EDEDED; /* Light text color for readability against the dark background */
+    font-family: 'Avenir', sans-serif; /* Sets a modern and clean font for the text */
+    background-color: #1A3B31; /* Dark green background for a mysterious atmosphere */
+    color: #F7E8D1; /* Light beige text color for readability against the dark background */
     margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
     display: flex; /* Flexbox layout to center content vertically and horizontally */
     justify-content: flex-start; /* Aligns content to the top */
     height: 100vh; /* Sets the height to cover the full viewport */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSttQDhbvho0cuUKLot5doRuk-RwCbwrVrs6g&s'); /* Background image for thematic effect */
-    background-size: cover; /* Ensures the image covers the entire background */
+    background-size: cover; /* Ensures any background image covers the entire background */
     background-position: center; /* Centers the background image */
 }
 
@@ -19,20 +18,20 @@ body {
     top: 0; /* Aligns to the top of the page */
     left: 0; /* Aligns to the left side of the page */
     width: 100%; /* Extends the bar across the full width of the page */
-    height: 50px; /* Sets the height of the bar */
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+    height: 60px; /* Sets the height of the bar */
+    background-color: #0F2D21; /* Dark green background for the top bar */
     display: flex; /* Flexbox layout to align items horizontally */
     justify-content: space-between; /* Spaces out the title and progress bar */
     align-items: center; /* Vertically centers the content */
     padding: 0 20px; /* Adds horizontal padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+    border-bottom: 4px solid #B5723B; /* Adds a solid brown border at the bottom */
     z-index: 1000; /* Ensures the top bar stays on top of other elements */
 }
 
 /* Page Title in Top Bar */
 #pageTitle {
-    color: #FFD700; /* Gold color for a classy look */
-    font-size: 18px; /* Sets the font size */
+    color: #F7E8D1; /* Light beige color for the text */
+    font-size: 24px; /* Sets the font size */
 }
 
 /* Progress Bar Container */
@@ -54,13 +53,13 @@ body {
 /* Vertical Navigation Bar: Fixed on the left side for navigation */
 #navBar {
     position: fixed; /* Keeps the navigation bar fixed on the left */
-    top: 50px; /* Starts right below the top bar */
+    top: 60px; /* Starts right below the top bar */
     left: 0; /* Aligns to the left side of the page */
     width: 200px; /* Width of the navigation bar */
-    height: calc(100% - 50px); /* Height of the nav bar, minus the top bar's height */
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    height: calc(100% - 60px); /* Height of the nav bar, minus the top bar's height */
+    background-color: #0F2D21; /* Dark green background for the nav bar */
     padding-top: 20px; /* Adds padding at the top */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+    border-right: 4px solid #B5723B; /* Adds a solid brown border on the right */
     z-index: 999; /* Keeps the nav bar on top but below the top bar */
 }
 
@@ -71,48 +70,5 @@ body {
     margin: 0; /* Removes default margin */
 }
 
-/* Navigation List Items: Styles each list item */
-#navBar ul li {
-    padding: 10px 20px; /* Adds padding around each list item */
-}
-
-/* Navigation Links: Styles the links within the list */
-#navBar ul li a {
-    color: #EDEDED; /* Light color for the text */
-    text-decoration: none; /* Removes default underline */
-    font-size: 18px; /* Sets the font size */
-    display: block; /* Makes the link fill the entire list item area */
-}
-
-/* Hover Effect for Links: Changes the background when hovering */
-#navBar ul li a:hover {
-    background-color: #444; /* Darker background on hover */
-    border-radius: 5px; /* Rounds the corners */
-}
-
-/* Main App Container: Adjustments to fit around the top and side bars */
-#app {
-    margin-left: 220px; /* Pushes content to the right to accommodate the nav bar */
-    margin-top: 60px; /* Pushes content down to accommodate the top bar */
-    padding: 20px; /* Adds padding inside the app container */
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
-    padding: 40px; /* Adds padding around the content */
-    border-radius: 10px; /* Rounds the corners of the container */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Adds a shadow for depth */
-    max-width: 800px; /* Limits the width of the content area */
-    text-align: center; /* Centers the text within the container */
-}
-
-/* Page Sections: Hides and shows different pages */
-.page {
-    display: none; /* Pages are hidden by default */
-    opacity: 0; /* Sets initial opacity to 0 */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for fading in */
-}
-
-/* Active Page: Styles the currently active page */
-.page.active {
-    display: block; /* Shows the active page */
-    opacity: 1; /* Fully opaque */
-}
+/* Navigatio
 
