@@ -8,6 +8,12 @@ function navigateTo(page) {
     // Show the selected page by adding the 'active' class to the targeted page element
     document.getElementById(page + 'Page').classList.add('active');
 
+    // If navigating to the home page, display all the main elements
+    if (page === 'home') {
+        document.getElementById('topBar').style.display = 'flex';
+        document.getElementById('navBar').style.display = 'block';
+    }
+
     // Update the title in the top bar to reflect the current page and its objective
     const pageTitle = {
         home: "Home",          // Display 'Home' when on the home page
@@ -28,5 +34,10 @@ function navigateTo(page) {
     }
 }
 
-// Initial load to show the home page by default when the app starts
-navigateTo('home');
+// Initial load to show the landing page by default when the app starts
+document.addEventListener('DOMContentLoaded', function() {
+    // Show the landing page and hide other elements initially
+    navigateTo('landing');
+    document.getElementById('topBar').style.display = 'none';
+    document.getElementById('navBar').style.display = 'none';
+});
