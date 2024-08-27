@@ -6,10 +6,30 @@ body {
     margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
     display: flex; /* Flexbox layout to center content vertically and horizontally */
-    justify-content: flex-start; /* Aligns content to the top */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
     height: 100vh; /* Sets the height to cover the full viewport */
     background-size: cover; /* Ensures any background image covers the entire background */
     background-position: center; /* Centers the background image */
+}
+
+/* Landing Page Style: Centered "Begin" button */
+#landingPage {
+    display: flex; /* Flexbox layout to center the button */
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center the text inside the button */
+}
+
+#landingPage button {
+    font-size: 24px; /* Larger text size for the button */
+    padding: 15px 30px; /* Larger padding for the button */
+    background-color: #B5723B; /* Brown background color for the button */
+    color: #F7E8D1; /* Light beige color for the text */
+    border: none; /* Remove default button border */
+    border-radius: 10px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 /* Top Bar: Fixed at the top of the page, contains page title and progress bar */
@@ -115,3 +135,4 @@ body {
     display: block; /* Shows the active page */
     opacity: 1; /* Fully opaque */
 }
+
