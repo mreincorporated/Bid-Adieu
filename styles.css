@@ -1,13 +1,10 @@
 /* General Body Style: Applies to the whole body of the web page */
 body {
-    font-family: 'Avenir', sans-serif; /* Sets a modern and clean font for the text */
-    background-color: #1A3B31; /* Dark green background for a mysterious atmosphere */
+    font-family: 'EB Garamond', serif; /* Modern, classic, and elegant font */
+    background-color: #0B1E17; /* Deep green background color */
     color: #F7E8D1; /* Light beige text color for readability against the dark background */
     margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
-    display: flex; /* Flexbox layout to center content vertically and horizontally */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
     height: 100vh; /* Sets the height to cover the full viewport */
     background-size: cover; /* Ensures any background image covers the entire background */
     background-position: center; /* Centers the background image */
@@ -20,6 +17,9 @@ body {
     align-items: center; /* Center the button vertically */
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center the text inside the button */
+    background-image: url('path_to_your_image.jpg'); /* Placeholder for your background image */
+    background-size: cover; /* Cover the entire background with the image */
+    background-position: center; /* Center the background image */
 }
 
 #landingPage button {
@@ -30,6 +30,11 @@ body {
     border: none; /* Remove default button border */
     border-radius: 10px; /* Round the corners of the button */
     cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hide top bar and navigation by default */
+#topBar, #navBar {
+    display: none; /* Hide these elements on the landing page */
 }
 
 /* Top Bar: Fixed at the top of the page, contains page title and progress bar */
@@ -119,6 +124,8 @@ body {
     border-radius: 10px; /* Rounds the corners of the container */
     border: 4px solid #B5723B; /* Adds a solid brown border around the container */
     max-width: 800px; /* Limits the width of the content area */
+    height: calc(100vh - 80px); /* Adjusts height to fit within the screen minus top bar */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
     text-align: center; /* Centers the text within the container */
     color: #F7E8D1; /* Light beige color for the text */
 }
