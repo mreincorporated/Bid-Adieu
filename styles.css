@@ -6,7 +6,7 @@ body {
     font-family: "Noticia Text", serif;/* Apply Noticia Text font family */
     .noticia-text-bold {
   font-family: "Noticia Text", serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -115,6 +115,7 @@ body {
 #navBar ul li a {
     color: #F7E8D1; /* Light beige color for the text */
     text-decoration: none; /* Removes default underline */
+    font-family: "Noticia Text", serif;
     font-size: 18px; /* Sets the font size */
     display: block; /* Makes the link fill the entire list item area */
 }
