@@ -41,3 +41,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('topBar').style.display = 'none';
     document.getElementById('navBar').style.display = 'none';
 });
+
