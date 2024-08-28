@@ -38,7 +38,7 @@ body {
 }
 
 /* Hide top bar and navigation by default */
-#topBar, #navBar {
+#topBar, #navBar, #app {
     display: none; /* Hide these elements on the landing page */
 }
 
