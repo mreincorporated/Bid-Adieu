@@ -1,6 +1,11 @@
 /* General Body Style: Applies to the whole body of the web page */
 body {
-    font-family: "Noticia Text", serif; /* Apply Noticia Text font family */
+    font-family: "Noticia Text", serif;/* Apply Noticia Text font family */
+    .noticia-text-bold {
+  font-family: "Noticia Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
     background-color: #0B1E17; /* Deep green background color */
     color: #F7E8D1; /* Light beige text color for readability against the dark background */
     margin: 0; /* Removes default margins */
@@ -143,3 +148,10 @@ body {
     display: block; /* Shows the active page */
     opacity: 1; /* Fully opaque */
 }
+
+
+
+
+
+
+
