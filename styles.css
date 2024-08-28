@@ -34,10 +34,10 @@ body {
 
 #landingPage button {
     font-size: 24px; /* Larger text size for the button */
-    padding: 15px 30px; /* Larger padding for the button */
-    background-color: #0C3D30; /* Dark green background color for the button */
+    padding: 15px 15px; /* Larger padding for the button */
+    background-color: #0B1E17; /* Dark green background color for the button */
     color: #F7E8D1; /* Light beige color for the text */
-    border: 2px solid #B5723B; /* Orange border with a slight thickness */
+    border: 3px solid #B5723B; /* Orange border with a slight thickness */
     border-radius: 10px; /* Round the corners of the button */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
