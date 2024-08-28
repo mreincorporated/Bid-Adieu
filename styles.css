@@ -1,6 +1,6 @@
 /* General Body Style: Applies to the whole body of the web page */
 body {
-    font-family: 'EB Garamond', serif; /* Modern, classic, and elegant font */
+    font-family: "Noticia Text", serif; /* Apply Noticia Text font family */
     background-color: #0B1E17; /* Deep green background color */
     color: #F7E8D1; /* Light beige text color for readability against the dark background */
     margin: 0; /* Removes default margins */
@@ -70,7 +70,7 @@ body {
 #progressBar {
     width: 30%; /* Starting progress width, adjustable via JavaScript */
     height: 15px; /* Height of the progress bar */
-    background-color: #4CAF50; /* Green color to indicate progress */
+    background-color: #8B0000; /* Deep blood red color for the progress bar */
     border-radius: 10px; /* Rounds the corners */
     transition: width 0.3s ease; /* Smooth transition when the progress changes */
 }
@@ -80,7 +80,7 @@ body {
     position: fixed; /* Keeps the navigation bar fixed on the left */
     top: 60px; /* Starts right below the top bar */
     left: 0; /* Aligns to the left side of the page */
-    width: 200px; /* Width of the navigation bar */
+    width: 60px; /* Same width as the height of the top bar */
     height: calc(100% - 60px); /* Height of the nav bar, minus the top bar's height */
     background-color: #0F2D21; /* Dark green background for the nav bar */
     padding-top: 20px; /* Adds padding at the top */
@@ -93,11 +93,12 @@ body {
     list-style-type: none; /* Removes default list bullets */
     padding: 0; /* Removes default padding */
     margin: 0; /* Removes default margin */
+    text-align: center; /* Centers the text within the navigation bar */
 }
 
 /* Navigation List Items: Styles each list item */
 #navBar ul li {
-    padding: 10px 20px; /* Adds padding around each list item */
+    padding: 10px 0; /* Adds padding around each list item */
 }
 
 /* Navigation Links: Styles the links within the list */
@@ -116,15 +117,15 @@ body {
 
 /* Main App Container: Adjustments to fit around the top and side bars */
 #app {
-    margin-left: 220px; /* Pushes content to the right to accommodate the nav bar */
-    margin-top: 80px; /* Pushes content down to accommodate the top bar */
+    margin-left: 60px; /* Pushes content to the right to accommodate the nav bar */
+    margin-top: 60px; /* Pushes content down to accommodate the top bar */
     padding: 20px; /* Adds padding inside the app container */
     background-color: #0F2D21; /* Dark green background for the content area */
     padding: 40px; /* Adds padding around the content */
     border-radius: 10px; /* Rounds the corners of the container */
     border: 4px solid #B5723B; /* Adds a solid brown border around the container */
-    max-width: 800px; /* Limits the width of the content area */
-    height: calc(100vh - 80px); /* Adjusts height to fit within the screen minus top bar */
+    max-width: calc(100vw - 60px); /* Limits the width of the content area */
+    height: calc(100vh - 60px); /* Adjusts height to fit within the screen minus top bar */
     box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
     text-align: center; /* Centers the text within the container */
     color: #F7E8D1; /* Light beige color for the text */
@@ -142,4 +143,3 @@ body {
     display: block; /* Shows the active page */
     opacity: 1; /* Fully opaque */
 }
-
