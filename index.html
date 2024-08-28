@@ -11,13 +11,13 @@
 
     <!-- Landing Page: This page will be shown when the app first loads -->
     <div id="landingPage" class="page active">
-        <button id="beginButton" onclick="navigateTo('home')">Begin</button>
+        <button id="beginButton" class="noticia-text-bold" onclick="navigateTo('home')">Begin</button>
     </div>
 
     <!-- Top Bar: This bar is fixed at the top of the page and includes the page title and progress bar -->
     <div id="topBar">
         <!-- Dynamic title displaying the current page name and placeholder objective -->
-        <div id="pageTitle">[Page Name] | Objective: [Placeholder Objective]</div>
+        <div id="pageTitle" class="noticia-text-bold">[Page Name] | Objective: [Placeholder Objective]</div>
         <!-- Container for the progress bar -->
         <div id="progressContainer">
             <!-- The actual progress bar element which will fill based on progress -->
@@ -29,11 +29,11 @@
     <div id="navBar">
         <ul>
             <!-- Navigation link for Home page, triggers navigateTo function -->
-            <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+            <li><a href="#" class="noticia-text-regular" onclick="navigateTo('home')">Home</a></li>
             <!-- Navigation link for Puzzle 1 page -->
-            <li><a href="#" onclick="navigateTo('puzzle1')">Puzzle 1</a></li>
+            <li><a href="#" class="noticia-text-regular" onclick="navigateTo('puzzle1')">Puzzle 1</a></li>
             <!-- Navigation link for Puzzle 2 page -->
-            <li><a href="#" onclick="navigateTo('puzzle2')">Puzzle 2</a></li>
+            <li><a href="#" class="noticia-text-regular" onclick="navigateTo('puzzle2')">Puzzle 2</a></li>
         </ul>
     </div>
 
@@ -41,37 +41,37 @@
     <div id="app">
         <!-- Home Page: Shown after the user clicks "Begin" on the landing page -->
         <div id="homePage" class="page">
-            <h1>Welcome to the Murder Mystery</h1>
+            <h1 class="noticia-text-bold">Welcome to the Murder Mystery</h1>
             <!-- Button to start the first puzzle, navigates to Puzzle 1 page -->
-            <button onclick="navigateTo('puzzle1')">Start Puzzle 1</button>
+            <button class="noticia-text-bold" onclick="navigateTo('puzzle1')">Start Puzzle 1</button>
         </div>
 
         <!-- Puzzle 1 Page: Contains the first puzzle with an input field and a submit button -->
         <div id="puzzle1Page" class="page">
-            <h2>Puzzle 1: The Riddle of Light</h2>
-            <p>I reveal the unseen, yet hide in plain sight. I’m the swiftest to exist, yet I’m always delayed. What am I?</p>
+            <h2 class="noticia-text-bold">Puzzle 1: The Riddle of Light</h2>
+            <p class="noticia-text-regular">I reveal the unseen, yet hide in plain sight. I’m the swiftest to exist, yet I’m always delayed. What am I?</p>
             <!-- Input field for user to enter their answer -->
             <input type="text" id="puzzle1Answer" placeholder="Enter your answer">
             <!-- Submit button to check the answer entered by the user -->
-            <button onclick="checkAnswer('puzzle1')">Submit</button>
+            <button class="noticia-text-bold" onclick="checkAnswer('puzzle1')">Submit</button>
             <!-- Feedback area where the result of the user's answer will be displayed -->
-            <p id="puzzle1Feedback"></p>
+            <p id="puzzle1Feedback" class="noticia-text-regular"></p>
             <!-- Button to navigate back to the Home page -->
-            <button onclick="navigateTo('home')">Back to Home</button>
+            <button class="noticia-text-regular" onclick="navigateTo('home')">Back to Home</button>
         </div>
 
         <!-- Puzzle 2 Page: Contains the second puzzle with an input field and a submit button -->
         <div id="puzzle2Page" class="page">
-            <h2>Puzzle 2: The Whispering Statues</h2>
-            <p>Stand where you hear the truth and the path will open. Which direction do you face?</p>
+            <h2 class="noticia-text-bold">Puzzle 2: The Whispering Statues</h2>
+            <p class="noticia-text-regular">Stand where you hear the truth and the path will open. Which direction do you face?</p>
             <!-- Input field for user to enter their answer -->
             <input type="text" id="puzzle2Answer" placeholder="Enter your answer">
             <!-- Submit button to check the answer entered by the user -->
-            <button onclick="checkAnswer('puzzle2')">Submit</button>
+            <button class="noticia-text-bold" onclick="checkAnswer('puzzle2')">Submit</button>
             <!-- Feedback area where the result of the user's answer will be displayed -->
-            <p id="puzzle2Feedback"></p>
+            <p id="puzzle2Feedback" class="noticia-text-regular"></p>
             <!-- Button to navigate back to the Home page -->
-            <button onclick="navigateTo('home')">Back to Home</button>
+            <button class="noticia-text-regular" onclick="navigateTo('home')">Back to Home</button>
         </div>
     </div>
 
@@ -79,4 +79,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
