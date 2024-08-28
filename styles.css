@@ -44,7 +44,7 @@ body {
     left: 0; /* Aligns to the left side of the page */
     width: 100%; /* Extends the bar across the full width of the page */
     height: 60px; /* Sets the height of the bar */
-    background-color: #0F2D21; /* Dark green background for the top bar */
+    background-color: #0B1E17; /* Dark green background for the top bar */
     display: flex; /* Flexbox layout to align items horizontally */
     justify-content: space-between; /* Spaces out the title and progress bar */
     align-items: center; /* Vertically centers the content */
@@ -70,7 +70,7 @@ body {
 #progressBar {
     width: 30%; /* Starting progress width, adjustable via JavaScript */
     height: 15px; /* Height of the progress bar */
-    background-color: #8B0000; /* Deep blood red color for the progress bar */
+    background-color: #5c0e08; /* Deep blood red color for the progress bar */
     border-radius: 10px; /* Rounds the corners */
     transition: width 0.3s ease; /* Smooth transition when the progress changes */
 }
@@ -82,7 +82,7 @@ body {
     left: 0; /* Aligns to the left side of the page */
     width: 60px; /* Same width as the height of the top bar */
     height: calc(100% - 60px); /* Height of the nav bar, minus the top bar's height */
-    background-color: #0F2D21; /* Dark green background for the nav bar */
+    background-color: #0B1E17; /* Dark green background for the nav bar */
     padding-top: 20px; /* Adds padding at the top */
     border-right: 4px solid #B5723B; /* Adds a solid brown border on the right */
     z-index: 999; /* Keeps the nav bar on top but below the top bar */
@@ -120,7 +120,7 @@ body {
     margin-left: 60px; /* Pushes content to the right to accommodate the nav bar */
     margin-top: 60px; /* Pushes content down to accommodate the top bar */
     padding: 20px; /* Adds padding inside the app container */
-    background-color: #0F2D21; /* Dark green background for the content area */
+    background-color: #0B1E17; /* Dark green background for the content area */
     padding: 40px; /* Adds padding around the content */
     border-radius: 10px; /* Rounds the corners of the container */
     border: 4px solid #B5723B; /* Adds a solid brown border around the container */
@@ -135,7 +135,7 @@ body {
 .page {
     display: none; /* Pages are hidden by default */
     opacity: 0; /* Sets initial opacity to 0 */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for fading in */
+    transition: opacity 0.75s ease-in-out; /* Smooth transition for fading in */
 }
 
 /* Active Page: Styles the currently active page */
