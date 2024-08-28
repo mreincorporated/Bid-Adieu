@@ -1,4 +1,7 @@
 /* General Body Style: Applies to the whole body of the web page */
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+
 body {
     font-family: "Noticia Text", serif;/* Apply Noticia Text font family */
     .noticia-text-bold {
@@ -6,6 +9,8 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+
+
     background-color: #0B1E17; /* Deep green background color */
     color: #F7E8D1; /* Light beige text color for readability against the dark background */
     margin: 0; /* Removes default margins */
