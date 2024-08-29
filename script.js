@@ -53,11 +53,11 @@ const muteMusicToggle = document.getElementById('muteMusicToggle');
 muteMusicToggle.addEventListener('click', function() {
     const music = document.getElementById('backgroundMusic');
     if (muteMusicToggle.src.includes('on')) {
-        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=BuDCu5ZpVkZC&format=png&color=000000';
+        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=BuDCu5ZpVkZC&format=png&color=B5723B';
         document.getElementById('musicStatus').innerText = "Music: Off";
         music.muted = true;
     } else {
-        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=17778&format=png&color=000000';
+        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=17778&format=png&color=B5723B';
         document.getElementById('musicStatus').innerText = "Music: On";
         music.muted = false;
     }
@@ -68,11 +68,11 @@ const muteSoundFxToggle = document.getElementById('muteSoundFxToggle');
 muteSoundFxToggle.addEventListener('click', function() {
     const sound = document.getElementById('clickSound');
     if (muteSoundFxToggle.src.includes('on')) {
-        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=9976&format=png&color=000000';
+        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=9976&format=png&color=B5723B';
         document.getElementById('soundFxStatus').innerText = "Sound Effects: Off";
         sound.muted = true;
     } else {
-        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=41563&format=png&color=000000';
+        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=41563&format=png&color=B5723B';
         document.getElementById('soundFxStatus').innerText = "Sound Effects: On";
         sound.muted = false;
     }
