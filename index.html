@@ -57,13 +57,24 @@
         <div id="settingsContent">
             <span id="closeModal">&times;</span>
             <h2>Settings</h2>
-            <button id="saveProgress">Save Progress</button><br>
-            <label>
-                <input type="checkbox" id="muteMusic"> Mute Background Music
-            </label><br>
-            <label>
-                <input type="checkbox" id="muteSoundFx"> Mute Sound Effects
-            </label>
+            
+            <!-- Save Progress Button as an Image -->
+            <img id="popupSaveButton" src="https://img.icons8.com/?size=100&id=59875&format=png&color=B5723B" alt="Save Progress" />
+            
+            <!-- Restart Game Button as an Image -->
+            <img id="restartGameButton" src="https://img.icons8.com/?size=100&id=fFl7SUNX1Tte&format=png&color=B5723B" alt="Restart Game" />
+
+            <!-- Mute Music Toggle -->
+            <div>
+                <img id="muteMusicToggle" src="mute-music-on.png" alt="Toggle Music" />
+                <span id="musicStatus">Music: On</span>
+            </div>
+
+            <!-- Mute Sound Effects Toggle -->
+            <div>
+                <img id="muteSoundFxToggle" src="mute-sound-on.png" alt="Toggle Sound Effects" />
+                <span id="soundFxStatus">Sound Effects: On</span>
+            </div>
         </div>
     </div>
 
