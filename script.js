@@ -4,7 +4,11 @@ function playClickSound() {
     sound.currentTime = 0; // Rewind to the start
     sound.play();
 }
-
+// Attach the event listener specifically to the "Begin" button on the landing page
+document.getElementById('beginButton').addEventListener('click', function() {
+    playClickSound();
+    navigateTo('puzzle1'); // Assuming the button navigates to Puzzle 1
+});
     
     // Function to navigate between pages
 function navigateTo(page) {
