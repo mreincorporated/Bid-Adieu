@@ -137,6 +137,7 @@ body {
     border: 2px solid #B5723B; /* Orange border */
     border-radius: 10px;
     cursor: pointer;
+    align-self: center; /* Center the image within the nav bar */
 }
 
 /* Settings Pop-up Modal */
