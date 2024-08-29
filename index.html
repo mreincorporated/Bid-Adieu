@@ -41,7 +41,25 @@
             <li><a href="#" class="noticia-text-regular" onclick="navigateTo('puzzle1')">Puzzle 1</a></li>
             <!-- Navigation link for Puzzle 2 page -->
             <li><a href="#" class="noticia-text-regular" onclick="navigateTo('puzzle2')">Puzzle 2</a></li>
+            
         </ul>
+        <!-- Settings Button at the Bottom -->
+        <button id="settingsButton">Settings</button>
+    </div>
+
+    <!-- Settings Pop-up Modal -->
+    <div id="settingsModal">
+        <div id="settingsContent">
+            <span id="closeModal">&times;</span>
+            <h2>Settings</h2>
+            <button id="saveProgress">Save Progress</button><br>
+            <label>
+                <input type="checkbox" id="muteMusic"> Mute Background Music
+            </label><br>
+            <label>
+                <input type="checkbox" id="muteSoundFx"> Mute Sound Effects
+            </label>
+        </div>
     </div>
 
     <!-- Main App Container: This div holds all the pages that will be displayed -->
