@@ -1,8 +1,17 @@
-// Function to navigate between pages
+// Function to play the click sound
+function playClickSound() {
+    const sound = document.getElementById('clickSound');
+    sound.currentTime = 0; // Rewind to the start
+    sound.play();
+}
+
+    
+    // Function to navigate between pages
 function navigateTo(page) {
     // Hide all pages by removing the 'active' class from each page element
     document.querySelectorAll('.page').forEach(function(pageElement) {
         pageElement.classList.remove('active'); // Removes the 'active' class
+            playClickSound();
     });
 
     // Show the selected page by adding the 'active' class to the targeted page element
@@ -33,6 +42,11 @@ function navigateTo(page) {
         document.getElementById('progressBar').style.width = '30%'; // Default progress for other pages
     }
 }
+
+// Example of attaching the sound to all buttons and links
+document.querySelectorAll('button, a').forEach(function(element) {
+    element.addEventListener('click', playClickSound);
+});
 
 // Initial load to show the landing page by default when the app starts
 document.addEventListener('DOMContentLoaded', function() {
