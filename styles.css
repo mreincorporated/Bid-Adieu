@@ -130,6 +130,8 @@ body {
 #settingsButton {
     margin: 20px; /* Adds some space around the button */
     padding: 10px;
+     width: 20px; /* Adjust size as needed */
+    height: 20px;
     background-color: #0C3D30; /* Dark green background */
     color: #F7E8D1; /* Light beige color for the text */
     border: 2px solid #B5723B; /* Orange border */
