@@ -141,7 +141,7 @@ body {
     cursor: pointer;
     width: 40px; /* Adjust size as needed */
     height: 40px;
-     padding-left: 15px; /* Add padding to the left side of the button */
+     padding-left: 10px; /* Add padding to the left side of the button */
 }
 
 /* Settings Pop-up Modal */
