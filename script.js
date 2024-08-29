@@ -15,8 +15,28 @@ function toggleSettingsModal() {
     }
 }
 
-// Event listener for the settings button
-settingsButton.addEventListener('click', toggleSettingsModal);
+// Event listeners for the Save and Settings buttons
+document.getElementById('saveButton').addEventListener('click', function() {
+    playClickSound();
+    saveProgress();
+});
+
+document.getElementById('popupSaveButton').addEventListener('click', function() {
+    playClickSound();
+    saveProgress();
+});
+
+document.getElementById('settingsButton').addEventListener('click', function() {
+    playClickSound();
+    toggleSettingsModal();
+});
+
+// Event listener for the Restart Game button
+document.getElementById('restartGameButton').addEventListener('click', function() {
+    playClickSound();
+    localStorage.clear(); // Clear all saved progress
+    location.reload(); // Restart the game by reloading the page
+});
 
 // Event listener for the close button in the modal
 closeModal.addEventListener('click', toggleSettingsModal);
@@ -28,28 +48,40 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Save progress logic (reuse previous saveProgress function)
-document.getElementById('saveProgress').addEventListener('click', saveProgress);
-
-// Mute background music logic (to be implemented when music is added)
-muteMusic.addEventListener('change', function() {
-    const music = document.getElementById('backgroundMusic'); // Assume you have an element with id 'backgroundMusic'
-    if (this.checked) {
+// Toggle Mute Music
+const muteMusicToggle = document.getElementById('muteMusicToggle');
+muteMusicToggle.addEventListener('click', function() {
+    const music = document.getElementById('backgroundMusic');
+    if (muteMusicToggle.src.includes('on')) {
+        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=BuDCu5ZpVkZC&format=png&color=000000';
+        document.getElementById('musicStatus').innerText = "Music: Off";
         music.muted = true;
     } else {
+        muteMusicToggle.src = 'https://img.icons8.com/?size=100&id=17778&format=png&color=000000';
+        document.getElementById('musicStatus').innerText = "Music: On";
         music.muted = false;
     }
 });
 
-// Mute sound effects logic
-muteSoundFx.addEventListener('change', function() {
+// Toggle Mute Sound Effects
+const muteSoundFxToggle = document.getElementById('muteSoundFxToggle');
+muteSoundFxToggle.addEventListener('click', function() {
     const sound = document.getElementById('clickSound');
-    if (this.checked) {
+    if (muteSoundFxToggle.src.includes('on')) {
+        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=9976&format=png&color=000000';
+        document.getElementById('soundFxStatus').innerText = "Sound Effects: Off";
         sound.muted = true;
     } else {
+        muteSoundFxToggle.src = 'https://img.icons8.com/?size=100&id=41563&format=png&color=000000';
+        document.getElementById('soundFxStatus').innerText = "Sound Effects: On";
         sound.muted = false;
     }
 });
+
+// Save progress logic (reuse previous saveProgress function)
+document.getElementById('saveProgress').addEventListener('click', saveProgress);
+
+
 
 // Function to play the click sound
 function playClickSound() {
