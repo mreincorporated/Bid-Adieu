@@ -139,8 +139,8 @@ body {
 #settingsButton {
     margin-bottom: 20px; /* Space at the bottom of the sidebar */
     cursor: pointer;
-    width: 30px; /* Adjust size as needed */
-    height: 30px;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
      padding-left: 15px; /* Add padding to the left side of the button */
 }
 
