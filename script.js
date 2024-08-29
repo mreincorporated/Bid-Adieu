@@ -1,3 +1,56 @@
+// Get references to the settings button and modal elements
+const settingsButton = document.getElementById('settingsButton');
+const settingsModal = document.getElementById('settingsModal');
+const closeModal = document.getElementById('closeModal');
+const muteMusic = document.getElementById('muteMusic');
+const muteSoundFx = document.getElementById('muteSoundFx');
+
+
+// Toggle the display of the settings modal
+function toggleSettingsModal() {
+    if (settingsModal.style.display === "none" || settingsModal.style.display === "") {
+        settingsModal.style.display = "block";
+    } else {
+        settingsModal.style.display = "none";
+    }
+}
+
+// Event listener for the settings button
+settingsButton.addEventListener('click', toggleSettingsModal);
+
+// Event listener for the close button in the modal
+closeModal.addEventListener('click', toggleSettingsModal);
+
+// Close the modal if the user clicks anywhere outside of the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === settingsModal) {
+        settingsModal.style.display = "none";
+    }
+});
+
+// Save progress logic (reuse previous saveProgress function)
+document.getElementById('saveProgress').addEventListener('click', saveProgress);
+
+// Mute background music logic (to be implemented when music is added)
+muteMusic.addEventListener('change', function() {
+    const music = document.getElementById('backgroundMusic'); // Assume you have an element with id 'backgroundMusic'
+    if (this.checked) {
+        music.muted = true;
+    } else {
+        music.muted = false;
+    }
+});
+
+// Mute sound effects logic
+muteSoundFx.addEventListener('change', function() {
+    const sound = document.getElementById('clickSound');
+    if (this.checked) {
+        sound.muted = true;
+    } else {
+        sound.muted = false;
+    }
+});
+
 // Function to play the click sound
 function playClickSound() {
     const sound = document.getElementById('clickSound');
