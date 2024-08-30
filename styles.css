@@ -40,6 +40,7 @@ body {
     border: 3px solid #B5723B; /* Orange border with a slight thickness */
     border-radius: 10px; /* Round the corners of the button */
     cursor: pointer; /* Change cursor to pointer on hover */
+    margin-top: 230vh; /* Adjust this value to change the vertical position of the button */
 }
 
 /* Hide top bar and navigation by default */
