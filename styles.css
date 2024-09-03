@@ -45,7 +45,7 @@ body {
 }
 
 /* Hide top bar and navigation by default */
-#topBar, #navBar, #app {
+#topBar, #navBar, #app, #saveButton, #popupSaveButton {
     display: none; /* Hide these elements on the landing page */
 }
 
