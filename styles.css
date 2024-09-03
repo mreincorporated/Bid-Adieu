@@ -28,7 +28,8 @@ body {
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center the text inside the button */
     background-image: url('BidAdieu2.png'); /* Placeholder for your background image */
-    background-size: cover; /* Cover the entire background with the image */
+    background-size: 80%; /* Cover the entire background with the image */
+    background-repeat: no-repeat;
     background-position: center; /* Center the background image */
 }
 
